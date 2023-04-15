@@ -1,0 +1,36 @@
+﻿<Window x:Class="budjet.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:budjet"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="460" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="197*"/>
+            <RowDefinition Height="34*"/>
+            <RowDefinition Height="34*"/>
+            <RowDefinition Height="27*"/>
+            <RowDefinition Height="53*"/>
+            <RowDefinition Height="33*"/>
+            <RowDefinition Height="67*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="655*"/>
+            <ColumnDefinition Width="136*"/>
+            <ColumnDefinition Width="9*"/>
+        </Grid.ColumnDefinitions>
+        <DataGrid x:Name = "Aqw"  SelectionChanged="Aqw_SelectionChanged" Margin="0,0,300,10" Background="{x:Null}" BorderBrush="White"/>
+        <TextBox x:Name="NameTbx"  HorizontalAlignment="Left"  TextWrapping="Wrap"  Text="Сумма" VerticalAlignment="Center" Width="132" Height="28"  Grid.Column="1" Grid.Row="2"  />
+
+        <Button x:Name="bt" Content="Добавить" HorizontalAlignment="Left"  VerticalAlignment="Top" Height="27" Width="102" Click="Button_Click" Grid.Column="1" Grid.Row="4" Margin="0,10,0,0"/>
+        <Button Content="Удалить" HorizontalAlignment="Left" VerticalAlignment="Top" Click="Button_Click_2" Width="102" Height="27" Grid.Column="1" Grid.Row="4" Grid.RowSpan="2" Margin="0,53,0,0"/>
+
+        <Button Content="Изменить" HorizontalAlignment="Left"  Width="102" Click="Button_Click_3" Grid.Column="1" Grid.Row="6" Margin="0,10,0,31" />
+        <ComboBox x:Name="cb_tip" HorizontalAlignment="Left" Width="120"  VerticalAlignment="Top" SelectionChanged="cb_zakachik_SelectionChanged" Grid.Column="1" Grid.Row="1"/>
+        <Button Grid.Column="1" Content="Добавить тип" HorizontalAlignment="Left"  Grid.Row="3" VerticalAlignment="Center" Click="Button_Click_1"/>
+        <DatePicker x:Name="dp" HorizontalAlignment="Left" Margin="10,2,0,0" VerticalAlignment="Top" Grid.Row="2" SelectedDateChanged="DatePicker_SelectedDateChanged" Width="136" AutomationProperties.IsOffscreenBehavior="Offscreen"/>
+        <TextBlock x:Name="totalTbk" HorizontalAlignment="Left" Margin="328,0,0,0" Grid.Row="6" TextWrapping="Wrap" VerticalAlignment="Center" Width="138"/>
+    </Grid>
+</Window>

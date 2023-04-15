@@ -1,0 +1,26 @@
+﻿<Window x:Class="budjet.Window1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:budjet"
+        mc:Ignorable="d"
+        Title="Window1" Height="250" Width="400">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="89*"/>
+            <RowDefinition Height="87*"/>
+            <RowDefinition Height="58*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="117*"/>
+            <ColumnDefinition Width="151*"/>
+            <ColumnDefinition Width="133*"/>
+        </Grid.ColumnDefinitions>
+        <DataGrid x:Name = "Aqw"  SelectionChanged="Aqw_SelectionChanged" Grid.ColumnSpan="3" Grid.RowSpan="3" />
+        <TextBox x:Name="NameTbx"  HorizontalAlignment="Left"  TextWrapping="Wrap"  Text="Тип" VerticalAlignment="Top" Width="132" Height="28" Margin="8,34,0,0" Grid.Column="1" Grid.Row="1"  />
+        <Button x:Name="bt" Content="Добавить" HorizontalAlignment="Center" Margin="0,84,0,0" VerticalAlignment="Top" Height="27" Width="102" Click="Button_Click" Grid.Column="1" Grid.Row="1" Grid.RowSpan="2"/>
+        <Button Grid.Column="1" Content="Удалить" HorizontalAlignment="Left"  Grid.Row="1" VerticalAlignment="Bottom" Click="Button_Click_1" Grid.ColumnSpan="2" Margin="150,0,0,38" Grid.RowSpan="2"/>
+
+    </Grid>
+</Window>
